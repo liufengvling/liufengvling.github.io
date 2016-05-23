@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/05/23/jackson-multi-json-to-one-object/index/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2016-05-23T09:49:00.551Z</lastmod>
+    <lastmod>2016-05-23T10:33:22.664Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/about/index.html</loc>
     
-    <lastmod>2016-05-23T09:42:29.309Z</lastmod>
+    <lastmod>2016-05-23T10:32:52.738Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/05/23/jackson-multi-json-to-one-object/index/</loc>
+    
+    <lastmod>2016-05-23T09:49:00.551Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/2016/05/23/hello-world/</loc>
     
     <lastmod>2016-05-23T09:22:55.531Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    
-    <lastmod>2016-05-23T09:00:10.051Z</lastmod>
     
   </url>
   
