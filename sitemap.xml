@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/03/23/optimize/</loc>
+    
+    <lastmod>2017-03-23T07:00:14.436Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2016-05-23T10:33:22.664Z</lastmod>
@@ -16,13 +23,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/05/23/jackson-multi-json-to-one-object/index/</loc>
-    
-    <lastmod>2016-05-23T09:49:00.551Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2016-05-23T09:35:23.160Z</lastmod>
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2016/05/23/hello-world/</loc>
+    <loc>http://yoursite.com/2017/03/23/hello-world/</loc>
     
     <lastmod>2016-05-23T09:22:55.531Z</lastmod>
     

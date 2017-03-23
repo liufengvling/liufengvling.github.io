@@ -89,7 +89,7 @@
 <meta name="description" content="为了和她的美好生活，为了不虚度生命">
 <meta property="og:type" content="website">
 <meta property="og:title" content="liufeng">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/web/index.html">
 <meta property="og:site_name" content="liufeng">
 <meta property="og:description" content="为了和她的美好生活，为了不虚度生命">
 <meta name="twitter:card" content="summary">
@@ -112,7 +112,7 @@
   };
 </script>
 
-  <title> liufeng </title>
+  <title> 标签: web | liufeng </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,9 +143,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,271 +263,45 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        web
+        <small>标签</small>
+      </h2>
+    </div>
+
     
       
 
-  
-  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2017/03/23/optimize/" itemprop="url">
               
-                
-                <a class="post-title-link" href="/2017/03/23/optimize/" itemprop="url">
-                  B端优化数据加载优化
-                </a>
+                <span itemprop="name">B端优化数据加载优化</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-23T13:11:44+08:00" content="2017-03-23">
-              2017-03-23
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-03-23T13:11:44+08:00"
+              content="2017-03-23" >
+          03-23
+        </time>
+      </div>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/03/23/optimize/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/optimize/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="浏览器访问过程"><a href="#浏览器访问过程" class="headerlink" title="浏览器访问过程"></a>浏览器访问过程</h2><p>   <a href="http://liufengvling@github.io" target="_blank" rel="external">请看我另一篇文章</a></p>
-<h3 id="优化原则"><a href="#优化原则" class="headerlink" title="优化原则"></a>优化原则</h3><blockquote>
-<ul>
-<li>减少http请求数量</li>
-<li>减少数据传输量大小</li>
-<li>减少数据的响应时间</li>
-<li>先css，后内容，最后js动作</li>
-<li>延迟加载</li>
-</ul>
-</blockquote>
-<h3 id="A-减少http请求数量的方法"><a href="#A-减少http请求数量的方法" class="headerlink" title="A. 减少http请求数量的方法"></a>A. 减少http请求数量的方法</h3><ol>
-<li>使用浏览器缓存,web中的css，js，图片等静态资源更新的频率都比较低，而这些文件几乎是每次访问页面都需要的，如果能把这些内容缓存到浏览器中，减少http请求量，能很好的提升性能。</li>
-</ol>
-<blockquote>
-<p>设置http头中的cache-control和expires的属性，可使文件缓存，如果想替换缓存可通过变更url请求地址（修改文件名或者加时间参数等）</p>
-</blockquote>
-<ol>
-<li>合并js，css，图片等资源,把图片base64编码放入页面减少http请求（弊端：正文加载变慢，一般不这样），例如：把多个js文件合并成。</li>
-</ol>
-<blockquote>
-<p>java项目中使用的合并压缩 <strong>JAWR</strong></p>
-</blockquote>
-<h3 id="B-减少数据传输量大小"><a href="#B-减少数据传输量大小" class="headerlink" title="B. 减少数据传输量大小"></a>B. 减少数据传输量大小</h3><ol>
-<li><p>使用gzip压缩传输<br>在服务器端对文件进行压缩，在浏览器端进行解压，文本文件压缩率在80%以上，所以开启对html，css，js进行gzip压缩传输，可有效减少数据量，但是这样会增加服务器和浏览器的压缩和解压运算量。</p>
-</li>
-<li><p>对js和css进行压缩<br>这个压缩是指对js，css等，通过去除空行，空格，换行符，注释，变量名混淆等方式减少文件大小。如果在此基础上进行gzip压缩传输，数据量可以更。</p>
-</li>
-<li><p>减少cookie来回传播<br>由于cookie会随着http请求来回的穿，所以cookie的内容不宜过多，如果有数据需要存在浏览器端，可以考虑浏览器 <strong>session storage</strong>。同时对于静态资源，cookie没什么用，可以放在不同的域名下，这样cookie就不会跟着了。</p>
-</li>
-</ol>
-<h3 id="C-减少数据的响应时间"><a href="#C-减少数据的响应时间" class="headerlink" title="C. 减少数据的响应时间"></a>C. 减少数据的响应时间</h3><ol>
-<li>CDN<br>通过CDN，把数据放在距离用户较近的服务器上，可以缩短网络链路，加快网络访问。</li>
-</ol>
-<h3 id="D-先css，后内容，最后js动作"><a href="#D-先css，后内容，最后js动作" class="headerlink" title="D. 先css，后内容，最后js动作"></a>D. 先css，后内容，最后js动作</h3><p>浏览器首先请求html正文，然后从上到下依次解析html文档，在前面的文件将会被先加载，加载完后再向下解析html文件。将css文件放到html头部，这样可以避免先渲染body后，再加载css渲染，导致一开始内容错乱，页面闪烁。js事件不影响视觉，最后加载。</p>
-<h3 id="E-延迟加载"><a href="#E-延迟加载" class="headerlink" title="E. 延迟加载"></a>E. 延迟加载</h3><ol>
-<li>当html准备好后，通过js方法加载资源。例如在所有资源加载完在加载图片</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**document.ready 是dom树加载完，并不一定所有资源都加载完</span><br><span class="line">*  window.onload  是在所有资源都加载完的动作</span><br><span class="line">*/</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//加载广告</span></span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">'&lt;scri'</span>+<span class="string">'pt src="http://www.jb51.net/ad.js"&gt;&lt;/s'</span>+<span class="string">'cript&gt;'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>自加载需要的资源<br>例如js，有两种方式，第一种把所有js压缩合并到几个文件，然后缓存到浏览器；第二种，只把全局性的js缓存到浏览器，然后各自页面按需加载少量js，一般这两种方式都可以。</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/23/hello-world/" itemprop="url">
-                  第一篇博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-23T09:39:48+08:00" content="2017-03-23">
-              2017-03-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/03/23/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>从今天起，开始写博客了，从开始敲这第一篇博客就感觉不一样了，之前看到大神说过，写博客更多的意义在于提升自己的地位，而我的目标在于找到自己与大神们的差距，身临其境，写出东西来，才能对比出距离，选择大于努力，这也许是一种努力的捷径。</p>
-<p>希望这第一篇博客成为一个印记，能勉励我前进，加油！</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
+  </div>
 
   
 

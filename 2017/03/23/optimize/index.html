@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,web,performance," />
 
 
 
@@ -86,15 +86,58 @@
 
 
 
-<meta name="description" content="为了和她的美好生活，为了不虚度生命">
-<meta property="og:type" content="website">
-<meta property="og:title" content="liufeng">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="浏览器访问过程   请看我另一篇文章
+优化原则
+
+减少http请求数量
+减少数据传输量大小
+减少数据的响应时间
+先css，后内容，最后js动作
+延迟加载
+
+
+A. 减少http请求数量的方法
+使用浏览器缓存,web中的css，js，图片等静态资源更新的频率都比较低，而这些文件几乎是每次访问页面都需要的，如果能把这些内容缓存到浏览器中，减少http请求量，能很好的提升性能。
+
+
+设置http头中的c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B端优化数据加载优化">
+<meta property="og:url" content="http://yoursite.com/2017/03/23/optimize/index.html">
 <meta property="og:site_name" content="liufeng">
-<meta property="og:description" content="为了和她的美好生活，为了不虚度生命">
+<meta property="og:description" content="浏览器访问过程   请看我另一篇文章
+优化原则
+
+减少http请求数量
+减少数据传输量大小
+减少数据的响应时间
+先css，后内容，最后js动作
+延迟加载
+
+
+A. 减少http请求数量的方法
+使用浏览器缓存,web中的css，js，图片等静态资源更新的频率都比较低，而这些文件几乎是每次访问页面都需要的，如果能把这些内容缓存到浏览器中，减少http请求量，能很好的提升性能。
+
+
+设置http头中的c">
+<meta property="og:updated_time" content="2017-03-23T07:00:14.436Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="liufeng">
-<meta name="twitter:description" content="为了和她的美好生活，为了不虚度生命">
+<meta name="twitter:title" content="B端优化数据加载优化">
+<meta name="twitter:description" content="浏览器访问过程   请看我另一篇文章
+优化原则
+
+减少http请求数量
+减少数据传输量大小
+减少数据的响应时间
+先css，后内容，最后js动作
+延迟加载
+
+
+A. 减少http请求数量的方法
+使用浏览器缓存,web中的css，js，图片等静态资源更新的频率都比较低，而这些文件几乎是每次访问页面都需要的，如果能把这些内容缓存到浏览器中，减少http请求量，能很好的提升性能。
+
+
+设置http头中的c">
 
 
 
@@ -112,7 +155,7 @@
   };
 </script>
 
-  <title> liufeng </title>
+  <title> B端优化数据加载优化 | liufeng </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,9 +186,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,9 +306,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -287,10 +328,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/23/optimize/" itemprop="url">
-                  B端优化数据加载优化
-                </a>
+                B端优化数据加载优化
               
             
           </h1>
@@ -356,9 +394,7 @@
       
 
       
-        
-          
-            <h2 id="浏览器访问过程"><a href="#浏览器访问过程" class="headerlink" title="浏览器访问过程"></a>浏览器访问过程</h2><p>   <a href="http://liufengvling@github.io" target="_blank" rel="external">请看我另一篇文章</a></p>
+        <h2 id="浏览器访问过程"><a href="#浏览器访问过程" class="headerlink" title="浏览器访问过程"></a>浏览器访问过程</h2><p>   <a href="http://liufengvling@github.io" target="_blank" rel="external">请看我另一篇文章</a></p>
 <h3 id="优化原则"><a href="#优化原则" class="headerlink" title="优化原则"></a>优化原则</h3><blockquote>
 <ul>
 <li>减少http请求数量</li>
@@ -400,138 +436,81 @@
 <li>自加载需要的资源<br>例如js，有两种方式，第一种把所有js压缩合并到几个文件，然后缓存到浏览器；第二种，只把全局性的js缓存到浏览器，然后各自页面按需加载少量js，一般这两种方式都可以。</li>
 </ol>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/23/hello-world/" itemprop="url">
-                  第一篇博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-23T09:39:48+08:00" content="2017-03-23">
-              2017-03-23
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/java/" rel="tag">#java</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/03/23/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/23/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+            <a href="/tags/web/" rel="tag">#web</a>
           
-
-          
-
-          
-          
-
+            <a href="/tags/performance/" rel="tag">#performance</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>从今天起，开始写博客了，从开始敲这第一篇博客就感觉不一样了，之前看到大神说过，写博客更多的意义在于提升自己的地位，而我的目标在于找到自己与大神们的差距，身临其境，写出东西来，才能对比出距离，选择大于努力，这也许是一种努力的捷径。</p>
-<p>希望这第一篇博客成为一个印记，能勉励我前进，加油！</p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/23/hello-world/" rel="next" title="第一篇博客">
+                <i class="fa fa-chevron-left"></i> 第一篇博客
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/03/23/optimize/"
+     data-title="B端优化数据加载优化"
+     data-content=""
+     data-url="http://yoursite.com/2017/03/23/optimize/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -539,6 +518,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/23/optimize/"
+           data-title="B端优化数据加载优化" data-url="http://yoursite.com/2017/03/23/optimize/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -558,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -616,6 +612,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器访问过程"><span class="nav-number">1.</span> <span class="nav-text">浏览器访问过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化原则"><span class="nav-number">1.1.</span> <span class="nav-text">优化原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-减少http请求数量的方法"><span class="nav-number">1.2.</span> <span class="nav-text">A. 减少http请求数量的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-减少数据传输量大小"><span class="nav-number">1.3.</span> <span class="nav-text">B. 减少数据传输量大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-减少数据的响应时间"><span class="nav-number">1.4.</span> <span class="nav-text">C. 减少数据的响应时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-先css，后内容，最后js动作"><span class="nav-number">1.5.</span> <span class="nav-text">D. 先css，后内容，最后js动作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-延迟加载"><span class="nav-number">1.6.</span> <span class="nav-text">E. 延迟加载</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -723,6 +730,10 @@ var _hmt = _hmt || [];
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
