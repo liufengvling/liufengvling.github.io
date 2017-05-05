@@ -120,7 +120,7 @@ A. 减少http请求数量的方法
 
 
 设置http头中的c">
-<meta property="og:updated_time" content="2017-03-23T07:00:14.436Z">
+<meta property="og:updated_time" content="2017-05-05T02:06:36.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B端优化数据加载优化">
 <meta name="twitter:description" content="浏览器访问过程   请看我另一篇文章
@@ -417,16 +417,19 @@ A. 减少http请求数量的方法
 <p>java项目中使用的合并压缩 <strong>JAWR</strong></p>
 </blockquote>
 <h3 id="B-减少数据传输量大小"><a href="#B-减少数据传输量大小" class="headerlink" title="B. 减少数据传输量大小"></a>B. 减少数据传输量大小</h3><ol>
-<li><p>使用gzip压缩传输<br>在服务器端对文件进行压缩，在浏览器端进行解压，文本文件压缩率在80%以上，所以开启对html，css，js进行gzip压缩传输，可有效减少数据量，但是这样会增加服务器和浏览器的压缩和解压运算量。</p>
-</li>
+<li>使用gzip压缩传输<br>在服务器端对文件进行压缩，在浏览器端进行解压，文本文件压缩率在80%以上，所以开启对html，css，js进行gzip压缩传输，可有效减少数据量，但是这样会增加服务器和浏览器的压缩和解压运算量。</li>
+</ol>
+<ol>
 <li><p>对js和css进行压缩<br>这个压缩是指对js，css等，通过去除空行，空格，换行符，注释，变量名混淆等方式减少文件大小。如果在此基础上进行gzip压缩传输，数据量可以更。</p>
 </li>
 <li><p>减少cookie来回传播<br>由于cookie会随着http请求来回的穿，所以cookie的内容不宜过多，如果有数据需要存在浏览器端，可以考虑浏览器 <strong>session storage</strong>。同时对于静态资源，cookie没什么用，可以放在不同的域名下，这样cookie就不会跟着了。</p>
 </li>
 </ol>
 <h3 id="C-减少数据的响应时间"><a href="#C-减少数据的响应时间" class="headerlink" title="C. 减少数据的响应时间"></a>C. 减少数据的响应时间</h3><ol>
-<li>CDN<br>通过CDN，把数据放在距离用户较近的服务器上，可以缩短网络链路，加快网络访问。</li>
+<li>通过CDN，把数据放在距离用户较近的服务器上，可以缩短网络链路，加快网络访问。</li>
+<li>通过dns-prefetch 提升页面载入速度，dns-prefetch或者x-dns-prefetch-control会提前预加载dns内容，这样当用户点击预加载过的链接内容时省去了dns解析的时间，直接在cache中找到了。</li>
 </ol>
+<p>&gt;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=<span class="string">"x-dns-prefetch-control"</span> content=<span class="string">"on"</span> /&gt;</span><br><span class="line"><span class="comment">//或者使用link标签来强制对DNS做预解析</span></span><br><span class="line">&lt;link rel=<span class="string">"dns-prefetch"</span> href=<span class="string">"http://ke.qq.com/"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="D-先css，后内容，最后js动作"><a href="#D-先css，后内容，最后js动作" class="headerlink" title="D. 先css，后内容，最后js动作"></a>D. 先css，后内容，最后js动作</h3><p>浏览器首先请求html正文，然后从上到下依次解析html文档，在前面的文件将会被先加载，加载完后再向下解析html文件。将css文件放到html头部，这样可以避免先渲染body后，再加载css渲染，导致一开始内容错乱，页面闪烁。js事件不影响视觉，最后加载。</p>
 <h3 id="E-延迟加载"><a href="#E-延迟加载" class="headerlink" title="E. 延迟加载"></a>E. 延迟加载</h3><ol>
 <li>当html准备好后，通过js方法加载资源。例如在所有资源加载完在加载图片</li>
@@ -435,6 +438,12 @@ A. 减少http请求数量的方法
 <ol>
 <li>自加载需要的资源<br>例如js，有两种方式，第一种把所有js压缩合并到几个文件，然后缓存到浏览器；第二种，只把全局性的js缓存到浏览器，然后各自页面按需加载少量js，一般这两种方式都可以。</li>
 </ol>
+<hr>
+<blockquote>
+<ul>
+<li>扩展：<a href="https://developers.google.com/speed/docs/insights/rules?csw=1" target="_blank" rel="external">https://developers.google.com/speed/docs/insights/rules?csw=1</a></li>
+</ul>
+</blockquote>
 
       
     </div>
@@ -476,6 +485,10 @@ A. 减少http请求数量的方法
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/03/brower-behavior/" rel="prev" title="浏览器解析url过程">
+                浏览器解析url过程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -566,7 +579,7 @@ A. 减少http请求数量的方法
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
